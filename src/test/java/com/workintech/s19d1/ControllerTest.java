@@ -22,6 +22,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 import static org.hamcrest.Matchers.*;
@@ -63,7 +64,7 @@ class ControllerTest {
         movie.setRating(5);
         movie.setDirectorName("Sample Director");
 
-        actor.setMovies(Arrays.asList(movie));
+        actor.setMovies(new HashSet<>(Arrays.asList(movie)));
 
         actorRequest = new ActorRequest();
         actorRequest.setActor(actor);

@@ -190,7 +190,7 @@ class MainTest {
 
         assertThatThrownBy(() -> actorService.findById(actorId))
                 .isInstanceOf(ApiException.class)
-                .hasMessageContaining("actor is not found with id: " + actorId);
+                .hasMessageContaining("Actor is not found with id: " + actorId);
     }
 
     @Test
